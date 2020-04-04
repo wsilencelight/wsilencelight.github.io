@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo博客如何迁移</title>
-    <url>/2020/04/04/hexo%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E8%BF%81%E7%A7%BB/</url>
-    <content><![CDATA[<h1 id="终于想起来要给博客换个窝"><a href="#终于想起来要给博客换个窝" class="headerlink" title="终于想起来要给博客换个窝"></a>终于想起来要给博客换个窝</h1><a id="more"></a>
-<h2 id="1-首先将原来的仓库复制-仅需复制以下几个文件"><a href="#1-首先将原来的仓库复制-仅需复制以下几个文件" class="headerlink" title="1.首先将原来的仓库复制(仅需复制以下几个文件)"></a>1.首先将原来的仓库复制(仅需复制以下几个文件)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scaffolds</span><br><span class="line">source</span><br><span class="line">themes</span><br><span class="line">_config.yml</span><br><span class="line">package.json</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-在新电脑上安装hexo环境"><a href="#2-在新电脑上安装hexo环境" class="headerlink" title="2.在新电脑上安装hexo环境"></a>2.在新电脑上安装hexo环境</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>web应用测试</title>
     <url>/2019/07/10/web%E5%BA%94%E7%94%A8%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<h1 id="感觉公司都不用这些o-￣▽￣-o"><a href="#感觉公司都不用这些o-￣▽￣-o" class="headerlink" title="感觉公司都不用这些o(￣▽￣)o"></a>感觉公司都不用这些o(<em>￣▽￣</em>)o</h1><a id="more"></a>
@@ -45,6 +29,31 @@
 <li>3.2 test1脚本完成了进入redmine-&gt;登录redmine-&gt;点击我的工作台并查看maven项目，test2脚本完成了进去qq邮箱界面-&gt;登录qq邮箱-&gt;点击收件箱并查看一封邮件</li>
 <li>3.3 脚本参数化：在test1测试中对脚本进行了参数化，设置了登陆的账户名和密码，从文件读取<br><img src="http://lc-rvl5rora.cn-n1.lcfile.com/cbb8175d5c06e3fdc0ad/4.PNG" alt="图3.1"></li>
 <li>3.4 测试场景配置：<br>(1)设置线程、访问时间、循环数,只需要点击thread group进行设置即可,如图设置了100个线程在10秒内执行并进行两个循环<br><img src="http://lc-rvl5rora.cn-n1.lcfile.com/c2b79c3c472205bcb6f3/3.PNG" alt="图3.2"><br>(2)设置查看结果树。查看结果树可以很清晰的看到该网页是否访问成功(绿色代表成功，红色则不成功)add-&gt;listener-&gt;view results tree<br><img src="http://lc-rvl5rora.cn-n1.lcfile.com/ca8cfed1b0aefe7c9447/5.PNG" alt="图3.3"><br>(3)设置断言。这个功能和查看结果树有些相似，可以根据界面上的一些元素进行匹配来判断一个界面是否访问成功，首先添加断言add-&gt;assertions-&gt;response assertions<br>再添加断言结果 add-&gt;listener-&gt;assertion results<br>若是未能成功怕匹配则断言中会出现fail<br><img src="http://lc-rvl5rora.cn-n1.lcfile.com/6d35f2c01a58b4ad9d67/6.PNG" alt="图3.4"><br><img src="http://lc-rvl5rora.cn-n1.lcfile.com/de0c509865bb61cbf973/7.PNG" alt="图3.5"><br>(4)添加一些用以分析网页性能的report以及graph(summary report,aggregate report,response time graph等)<br>(5)测试执行可以直接run或是单步执行，在执行过程中就可以看到结果<br>(6)结果分析(以test2文件为例)，首先在总体结果报告中可以看到我的出错率为0，平均响应时间为83,最大响应时间以及最小响应时间分别为33/417,传输速度达到589.93kb,从数据上来看网页性能较好<br><img src="http://lc-rvl5rora.cn-n1.lcfile.com/74fe664de921f968fb08/8.PNG" alt="图3.6"><br>那么在查看结果树中因为错误是0所以是全是绿的<br><img src="http://lc-rvl5rora.cn-n1.lcfile.com/d581f52ca6745960cf0d/9.PNG" alt="图3.7"><br>结果图将总体报告中的一些数据用图反映出来<br><img src="http://lc-rvl5rora.cn-n1.lcfile.com/618ee82c9614dcbecd84/10.PNG" alt="图3.8"><br>再看响应时间图，一直较为平稳，也就是说即使是密集访问的时间也能保持较快的响应时间，这也能看出网站的性能较好<br><img src="http://lc-rvl5rora.cn-n1.lcfile.com/77db44a5d77e46324fa7/11.PNG" alt="图3.9"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>github+hexo搭建个人主页</title>
+    <url>/2019/06/10/github-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</url>
+    <content><![CDATA[<h1 id="想搭的朋友可以看看"><a href="#想搭的朋友可以看看" class="headerlink" title="想搭的朋友可以看看"></a>想搭的朋友可以看看</h1><a id="more"></a>
+<h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><ul>
+<li>nodejs</li>
+<li>git</li>
+<li>github</li>
+<li>域名</li>
+<li>hexo</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.bilibili.com/video/av24897960/" target="_blank" rel="noopener">搭建视频</a>&nbsp;&nbsp;&nbsp;<a href="https://www.bilibili.com/video/av17653359/" target="_blank" rel="noopener">主题优化视频</a>&nbsp;&nbsp;&nbsp;<a href="https://zhuanlan.zhihu.com/p/26625249?utm_source=qq&utm_medium=social" target="_blank" rel="noopener">知乎</a>&nbsp;&nbsp;&nbsp;<a href="https://heshang.ink/2018/07/21/Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%EF%BC%89/" target="_blank" rel="noopener">某博主</a><br><a href="tholman.com/github-corners">github图标</a>&nbsp;&nbsp;&nbsp;<a href="https://fontawesome.com" target="_blank" rel="noopener">icon</a></p>
+<h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2><ul>
+<li>有些功能要下载依赖</li>
+<li>还有些莫名其妙的坑，新版本和教程都不太一样</li>
 </ul>
 ]]></content>
       <categories>
@@ -95,31 +104,6 @@
       <tags>
         <tag>javascript</tag>
         <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>github+hexo搭建个人主页</title>
-    <url>/2019/06/10/github-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</url>
-    <content><![CDATA[<h1 id="想搭的朋友可以看看"><a href="#想搭的朋友可以看看" class="headerlink" title="想搭的朋友可以看看"></a>想搭的朋友可以看看</h1><a id="more"></a>
-<h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><ul>
-<li>nodejs</li>
-<li>git</li>
-<li>github</li>
-<li>域名</li>
-<li>hexo</li>
-</ul>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.bilibili.com/video/av24897960/" target="_blank" rel="noopener">搭建视频</a>&nbsp;&nbsp;&nbsp;<a href="https://www.bilibili.com/video/av17653359/" target="_blank" rel="noopener">主题优化视频</a>&nbsp;&nbsp;&nbsp;<a href="https://zhuanlan.zhihu.com/p/26625249?utm_source=qq&utm_medium=social" target="_blank" rel="noopener">知乎</a>&nbsp;&nbsp;&nbsp;<a href="https://heshang.ink/2018/07/21/Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%EF%BC%89/" target="_blank" rel="noopener">某博主</a><br><a href="tholman.com/github-corners">github图标</a>&nbsp;&nbsp;&nbsp;<a href="https://fontawesome.com" target="_blank" rel="noopener">icon</a></p>
-<h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2><ul>
-<li>有些功能要下载依赖</li>
-<li>还有些莫名其妙的坑，新版本和教程都不太一样</li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>使用</tag>
       </tags>
   </entry>
   <entry>
@@ -217,6 +201,22 @@
       <tags>
         <tag>工具</tag>
         <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客如何迁移</title>
+    <url>/2020/04/04/hexo%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E8%BF%81%E7%A7%BB/</url>
+    <content><![CDATA[<h1 id="终于想起来要给博客换个窝"><a href="#终于想起来要给博客换个窝" class="headerlink" title="终于想起来要给博客换个窝"></a>终于想起来要给博客换个窝</h1><a id="more"></a>
+<h2 id="1-首先将原来的仓库复制-仅需复制以下几个文件"><a href="#1-首先将原来的仓库复制-仅需复制以下几个文件" class="headerlink" title="1.首先将原来的仓库复制(仅需复制以下几个文件)"></a>1.首先将原来的仓库复制(仅需复制以下几个文件)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scaffolds</span><br><span class="line">source</span><br><span class="line">themes</span><br><span class="line">_config.yml</span><br><span class="line">package.json</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-在新电脑上安装hexo环境"><a href="#2-在新电脑上安装hexo环境" class="headerlink" title="2.在新电脑上安装hexo环境"></a>2.在新电脑上安装hexo环境</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
       </tags>
   </entry>
 </search>
