@@ -1,6 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo博客如何迁移</title>
+    <url>/2020/04/04/hexo%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E8%BF%81%E7%A7%BB/</url>
+    <content><![CDATA[<h1 id="终于想起来要给博客换个窝"><a href="#终于想起来要给博客换个窝" class="headerlink" title="终于想起来要给博客换个窝"></a>终于想起来要给博客换个窝</h1><a id="more"></a>
+<h2 id="1-首先将原来的仓库复制-仅需复制以下几个文件"><a href="#1-首先将原来的仓库复制-仅需复制以下几个文件" class="headerlink" title="1.首先将原来的仓库复制(仅需复制以下几个文件)"></a>1.首先将原来的仓库复制(仅需复制以下几个文件)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scaffolds</span><br><span class="line">source</span><br><span class="line">themes</span><br><span class="line">_config.yml</span><br><span class="line">package.json</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-在新电脑上安装hexo环境"><a href="#2-在新电脑上安装hexo环境" class="headerlink" title="2.在新电脑上安装hexo环境"></a>2.在新电脑上安装hexo环境</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载node包"><a href="#下载node包" class="headerlink" title="下载node包"></a>下载node包</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac下安装ngrok实现内网穿透</title>
+    <url>/2020/04/10/Mac%E4%B8%8B%E5%AE%89%E8%A3%85ngrok%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</url>
+    <content><![CDATA[<h1 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h1><a id="more"></a>
+<ul>
+<li><ol>
+<li>从官网下载ngrko(<a href="http://www.ngrok.com/" target="_blank" rel="noopener">点击下载</a>)</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>解压并拖到Application文件夹下</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>建立软连接<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd /usr/local/bin</span><br><span class="line">ln -s /Applications/ngrok ngrok</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>将authtoken加到ngrok.yml中<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ngrok authtoken yourself-token</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>启动<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ngrok http 8080</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>github+hexo搭建个人主页</title>
     <url>/2019/06/10/github-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</url>
     <content><![CDATA[<h1 id="想搭的朋友可以看看"><a href="#想搭的朋友可以看看" class="headerlink" title="想搭的朋友可以看看"></a>想搭的朋友可以看看</h1><a id="more"></a>
@@ -110,46 +164,6 @@
       </tags>
   </entry>
   <entry>
-    <title>小程序之插槽和外部样式</title>
-    <url>/2020/04/09/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B9%8B%E6%8F%92%E6%A7%BD%E5%92%8C%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F/</url>
-    <content><![CDATA[<p>😷</p>
-<a id="more"></a>
-<h1 id="在小程序中使用插槽"><a href="#在小程序中使用插槽" class="headerlink" title="在小程序中使用插槽"></a>在小程序中使用插槽</h1><ul>
-<li><p>小程序中使用插槽和vue等大同小异，不过需要在component里声明</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">options: &#123;</span><br><span class="line">  multipleSlots: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不管是几个插槽都需要声明否则插槽不起作用</p>
-</li>
-<li><p>组件中</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;slot name=&quot;num&quot;&gt;&lt;/slot&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>页面中</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;w-tag&gt;</span><br><span class="line">    &lt;text slot=&quot;num&quot;&gt;slot&lt;/text&gt;</span><br><span class="line">&lt;/w-tag&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h1 id="小程序中的外部样式"><a href="#小程序中的外部样式" class="headerlink" title="小程序中的外部样式"></a>小程序中的外部样式</h1><ul>
-<li><p>在封装组件的时候我们希望能够让使用组件的人能够自行修改样式，通过像传值的方式，在小程序中可以通过在component里声明</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">externalClasses: [&apos;ex-tag1&apos;,&apos;ex-tag2&apos;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>组件中</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;view class=&quot;container ex-tag1&quot;&gt;</span><br><span class="line">  &lt;text&gt;&#123;&#123;text&#125;&#125;&lt;/text&gt;</span><br><span class="line">  &lt;slot name=&quot;num&quot;&gt;&lt;/slot&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>页面中,在页面中定义样式覆盖即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;w-tag ex-tag1=&quot;ex-tag1&quot; /&gt;&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-        <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>promise与callback对比</title>
     <url>/2020/04/04/promise%E4%B8%8E%E5%9B%9E%E8%B0%83%E5%AF%B9%E6%AF%94/</url>
     <content><![CDATA[<h1 id="promise-vs-callback"><a href="#promise-vs-callback" class="headerlink" title="promise vs callback"></a>promise vs callback</h1><a id="more"></a>
@@ -211,21 +225,43 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo博客如何迁移</title>
-    <url>/2020/04/04/hexo%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E8%BF%81%E7%A7%BB/</url>
-    <content><![CDATA[<h1 id="终于想起来要给博客换个窝"><a href="#终于想起来要给博客换个窝" class="headerlink" title="终于想起来要给博客换个窝"></a>终于想起来要给博客换个窝</h1><a id="more"></a>
-<h2 id="1-首先将原来的仓库复制-仅需复制以下几个文件"><a href="#1-首先将原来的仓库复制-仅需复制以下几个文件" class="headerlink" title="1.首先将原来的仓库复制(仅需复制以下几个文件)"></a>1.首先将原来的仓库复制(仅需复制以下几个文件)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scaffolds</span><br><span class="line">source</span><br><span class="line">themes</span><br><span class="line">_config.yml</span><br><span class="line">package.json</span><br></pre></td></tr></table></figure>
+    <title>小程序之插槽和外部样式</title>
+    <url>/2020/04/09/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B9%8B%E6%8F%92%E6%A7%BD%E5%92%8C%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F/</url>
+    <content><![CDATA[<p>😷</p>
+<a id="more"></a>
+<h1 id="在小程序中使用插槽"><a href="#在小程序中使用插槽" class="headerlink" title="在小程序中使用插槽"></a>在小程序中使用插槽</h1><ul>
+<li><p>小程序中使用插槽和vue等大同小异，不过需要在component里声明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">options: &#123;</span><br><span class="line">  multipleSlots: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不管是几个插槽都需要声明否则插槽不起作用</p>
+</li>
+<li><p>组件中</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;slot name=&quot;num&quot;&gt;&lt;/slot&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>页面中</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;w-tag&gt;</span><br><span class="line">    &lt;text slot=&quot;num&quot;&gt;slot&lt;/text&gt;</span><br><span class="line">&lt;/w-tag&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-在新电脑上安装hexo环境"><a href="#2-在新电脑上安装hexo环境" class="headerlink" title="2.在新电脑上安装hexo环境"></a>2.在新电脑上安装hexo环境</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="小程序中的外部样式"><a href="#小程序中的外部样式" class="headerlink" title="小程序中的外部样式"></a>小程序中的外部样式</h1><ul>
+<li><p>在封装组件的时候我们希望能够让使用组件的人能够自行修改样式，通过像传值的方式，在小程序中可以通过在component里声明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">externalClasses: [&apos;ex-tag1&apos;,&apos;ex-tag2&apos;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>组件中</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;view class=&quot;container ex-tag1&quot;&gt;</span><br><span class="line">  &lt;text&gt;&#123;&#123;text&#125;&#125;&lt;/text&gt;</span><br><span class="line">  &lt;slot name=&quot;num&quot;&gt;&lt;/slot&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>页面中,在页面中定义样式覆盖即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;w-tag ex-tag1=&quot;ex-tag1&quot; /&gt;&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="下载node包"><a href="#下载node包" class="headerlink" title="下载node包"></a>下载node包</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
+</li>
+</ul>
 ]]></content>
       <categories>
-        <category>工具</category>
+        <category>code</category>
       </categories>
       <tags>
-        <tag>工具</tag>
+        <tag>javascript</tag>
+        <tag>微信小程序</tag>
       </tags>
   </entry>
   <entry>
