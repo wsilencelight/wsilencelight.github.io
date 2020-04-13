@@ -1699,6 +1699,14 @@ pre .javascript .function {
 .post-body ul a:hover {
   color: #9c9;
 }
+.post-body ol a {
+  color: #93f;
+  border-bottom: none;
+  transition: color 0.5s;
+}
+.post-body ol a:hover {
+  color: #9c9;
+}
 .sidebar {
   position: fixed;
   right: 0;
@@ -1833,7 +1841,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff8b;
+  background: #669609;
 }
 .feed-link,
 .chat {
